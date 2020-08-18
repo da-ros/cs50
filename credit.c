@@ -43,6 +43,10 @@ int main(void){
                 printf("AMEX\n");
                 return 0;
             }
+            else{
+                printf("INVALID\n");
+                return 0;
+            }
         }
         else if (lastDigit==5 && i==16 && (sum%10==0)){
             int penDigit;
@@ -51,6 +55,10 @@ int main(void){
             }
             if(penDigit==1 || penDigit==2 || penDigit==3 || penDigit==4 || penDigit==5){
                 printf("MASTERCARD\n");
+                return 0;
+            }
+            else{
+                printf("INVALID\n");
                 return 0;
             }
         }
