@@ -23,10 +23,7 @@ int main(int argc, char *argv[])
     BYTE *buffer = malloc(sizeof(BYTE) * 512);
    // while(!feof(file)){ // Repeat until end of card
 
-    //while    (fread(buffer, sizeof(BYTE), 512, file)== 512){ // Read 512 bytes into a buffer
-
-    do{
-        fread(buffer, sizeof(BYTE), 512, file);
+    while(fread(buffer, sizeof(BYTE), 512, file) == 512){ // Read 512 bytes into a buffer
         
         if (buffer[0]==0xff && buffer[1]==0xd8 && buffer[2]==0xff && (buffer[3] & 0xf0)==0xe0){ // If start of a new JPEG, write first 512 B chunk
             if(n_photo==0){  // If first JPEG file
@@ -54,7 +51,7 @@ int main(int argc, char *argv[])
         else if (n_photo>0){ // Keep writing next 512 B chunk of the same img file
             fwrite(buffer, sizeof(BYTE), 512, img);
         }
-    } while (!feof(file));
+    } 
     fclose(img);// Close the last written file and free buffer
     fclose(file);
     free(buffer);
