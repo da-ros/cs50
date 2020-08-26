@@ -20,11 +20,10 @@ int main(int argc, char *argv[])
 
     int n_photo = 0;
     FILE *img = NULL;
-    BYTE *buffer;// = malloc(sizeof(BYTE) * 512);
-    while(!feof(file)){ // Repeat until end of card
+    BYTE *buffer = malloc(sizeof(BYTE) * 512);
+   // while(!feof(file)){ // Repeat until end of card
 
-        buffer = malloc(sizeof(BYTE) * 512);
-        fread(buffer, sizeof(BYTE), 512, file); // Read 512 bytes into a buffer
+    while    (fread(buffer, sizeof(BYTE), 512, file)== 512){ // Read 512 bytes into a buffer
 
         if (buffer[0]==0xff && buffer[1]==0xd8 && buffer[2]==0xff && (buffer[3] & 0xf0)==0xe0){ // If start of a new JPEG, write first 512 B chunk
             if(n_photo==0){  // If first JPEG file
