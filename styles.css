@@ -1,0 +1,122 @@
+body{
+    background-color: #F5FAED;
+    color: #110011;
+}
+header{
+    color: #9E0031;
+    border: 2px solid #110011;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+footer{
+    color: #F5FAED;
+    background-color: #9E0031;
+    height: 40px;
+    border-radius: 7px;
+    clear: both;
+    bottom: 1%;
+    position: fixed;
+    width: 100%;
+}
+.Contact{
+    font-size: 0.8em;
+    text-align: right;
+    padding-right: 10px;
+}
+#tPage{
+    float: left;
+    margin: 30px 10px;
+}
+.userLog{
+    font-size: 0.75em;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 10px;
+    padding-top: 10px;
+    margin-bottom: 0px;
+}
+header{
+    padding: 0px;
+}
+#slogan{
+    text-align: center;
+    font-size: 1.5em;
+    margin: 15px;
+}
+.btn{
+    text-align: center;
+}
+.subtitle{
+    text-align: center;
+    font-size: 1.5em;
+}
+.box{
+    border: 1px solid #9E0031;
+    border-radius: 5px;
+    padding: 10px;
+    width: 180px;
+}
+#time, #zone, #nearby{
+    float: left;
+    margin: 10px;
+}
+#sInput{
+    width: 45%;
+    font-size: 0.8em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+#searchB, #modelB{
+    text-align: center;
+    clear: both;
+}
+#personBox, #floorBox, #buildingBox{
+    width: 90%;
+}
+#persons, #floors, #building{
+    float: left;
+    margin: 10px;
+}
+#cInput{
+    text-align: center;
+    font-size: 0.8em;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#job, #income, #children{
+    float: left;
+    margin: 10px;
+}
+#fInput{
+    text-align: center;
+    width: 45%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.8em;
+}
+#continueB{
+    text-align: center;
+    bottom: 6%;
+    position: fixed;
+    width: 100%;
+}
+#resTitle{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+#resultChosen, #resModel, #resFinance{
+    border: 1px solid #9E0031;
+    border-radius: 5px;
+    padding: 10px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+#creditEntities{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}

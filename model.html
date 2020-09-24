@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Y.com | Model</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div id="tPage"><h2 id="pTitle">Y.com</h2></div>
+            <p class="userLog" id="userLog">Sign Up<br>Log In<br>USD - English - Location<br>My Profile<br>My Projects<br><br></p>
+        </header>
+        <article>
+            <h2 class="subtitle">Construct Model</h2>
+        </article>
+        <div id="cInput">
+            <section class="box" id="persons">
+                <p>Number of persons</p>
+                <input type="text" id="personBox" placeholder="Persons">
+            </section>
+            <section class="box" id="floors">
+                <p>Desired floors</p>
+                <input type="text" id="floorBox" placeholder="Floors">
+            </section>
+            <section class="box" id="building">
+                <p>Building Type</p>
+                <select id="buildingBox">
+                    <option value="Living House" selected>Living House</option>
+                    <option value="Apartment Building">Apartment Building</option>
+                    <option value="Mansion">Mansion</option>
+                    <option value="Cottage">Cottage</option>
+                    <option value="Bungalow">Bungalow</option>
+                    <option value="Chalet">Chalet</option>
+                    <option value="Ranch-Style">Ranch-Style</option>
+                    <option value="Tiny Home">Tiny home</option>
+                </select>
+            </section>
+        </div>
+        <p id="modelB"><input id="constructBut" type="button" class="btn btn-danger" value="Construct"></p>
+        <div id="resModel" style="display:none"></div>
+        <div id="modelTemplates" style="display:none"></div>
+        <p id="continueB">
+            <input type="button" onclick="window.location.href='/location.html'" class="btn btn-warning" value="Return">
+            <input type="button" onclick="window.location.href='/financing.html'" class="btn btn-success" value="Continue">
+        </p>
+        <footer>
+            <p class="Contact" id="Contact">Contact<br><small>2020</small></p>
+        </footer>
+        <script type="text/javascript" src="model.js"></script>
+    </body>
+</html>

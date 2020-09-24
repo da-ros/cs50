@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Y.com | Location</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div id="tPage"><h2 id="pTitle">Y.com</h2></div>
+            <p class="userLog" id="userLog">Sign Up<br>Log In<br>USD - English - Location<br>My Profile<br>My Projects<br><br></p>
+        </header>
+        <article>
+            <h2 class="subtitle">Search Location</h2>
+        </article>
+        <div id="sInput">
+            <section class="box" id="time">
+                <p>Time to Downtown</p>
+                <select id="selectTime">
+                    <option value="5" selected>Less than 5 mins</option>
+                    <option value="10">Less than 10 mins</option>
+                    <option value="15">Less than 15 mins</option>
+                    <option value="30">Less than 30 mins</option>
+                </select>
+            </section>
+            <section class="box" id="zone">
+                <p>Zone-Quality</p>
+                <select id="selectZone">
+                    <option value="Normal" selected>Normal</option>
+                    <option value="High-Quality">High-Quality</option>
+                    <option value="Luxury">Luxury</option>
+                </select>
+            </section>
+            <section class="box" id="nearby">
+                <input type="checkbox" id="checkP" value="Nearby Parks"> Nearby Parks<br>
+                <input type="checkbox" id="checkS" value="Nearby Shops"> Nearby Shops<br>
+                <input type="checkbox" id="checkE" value="Nearby Education"> Nearby Education
+            </section>
+        </div>
+        <p id="searchB"><input id="locationBut" type="button" class="btn btn-danger" value="Search"></p>
+        <div id="resultChosen" style="display:none" ></div>
+        <div id="map" style="display:none"></div>
+        <p id="continueB">
+            <input type="button" onclick="window.location.href='/index.html'" class="btn btn-warning" value="Return">
+            <input type="button" onclick="window.location.href='/model.html'" class="btn btn-success" value="Continue">
+        </p>
+        <footer>
+            <p class="Contact" id="Contact">Contact<br><small>2020</small></p>
+        </footer>
+        <script type="text/javascript" src="location.js"></script>
+    </body>
+</html>

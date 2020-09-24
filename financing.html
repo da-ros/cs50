@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Y.com | Financing</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div id="tPage"><h2 id="pTitle">Y.com</h2></div>
+            <p class="userLog" id="userLog">Sign Up<br>Log In<br>USD - English - Location<br>My Profile<br>My Projects<br><br></p>
+        </header>
+        <article>
+            <h2 class="subtitle">Financing</h2>
+        </article>
+        <div id="fInput">
+            <section class="box" id="job">
+                <p>Actual Job</p>
+                <input type="text" id="jobBox" placeholder="Job">
+            </section>
+            <section class="box" id="income">
+                <p>Annual Income</p>
+                <input type="text" id="incomeBox" placeholder="Income">
+            </section>
+            <section class="box" id="children">
+                <p>Number of Children</p>
+                <select id="childrenBox">
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </section>
+        </div>
+        <p id="searchB"><input id="searchF" type="button" class="btn btn-danger" value="Search"></p>
+        <div id="resFinance" style="display:none"></div>
+        <div id="creditEntities" style="display:none"></div>
+        <p id="continueB">
+            <input type="button" onclick="window.location.href='/model.html'" class="btn btn-warning" value="Return">
+        </p>
+        <footer>
+            <p class="Contact" id="Contact">Contact<br><small>2020</small></p>
+        </footer>
+        <script type="text/javascript" src="finance.js"></script>
+    </body>
+</html>
