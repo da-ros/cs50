@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Change Password
+{% endblock %}
+
+{% block main %}
+    <form action="/change_pass", method="post">
+        <div class="form-group">
+            <input class="form-control" autofocus pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" title="Password Must Contain at least 6 Characters, must include 1 Uppercase, 1 Lowercase and 1 SpecialChar or Number" name="password" placeholder="New Password" type="password">
+        </div>
+        <div class="form-group">
+            <input class="form-control" pattern="(?=^.{6,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" name="confirmation" placeholder="New Password (again)" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Change</button>
+    </form>
+{% endblock %}

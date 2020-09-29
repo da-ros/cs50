@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+
+       <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>TOTAL</th>
+                <th>Sell</th>
+                <th>Buy</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="4"></td>
+                <td>{{balance}}</td>
+            </tr>
+        </tfoot>
+        <tbody>
+
+            {% for row in user_rows %}
+
+                <form action="/sell" method="post">
+                    <tr>
+                        <td>{{ row["symbol"] }}</td>
+                        <td>{{ row["name"]  }}</td>
+                        <td>{{ row["shares"] }}</td>
+                        <td>{{ row["price"] | usd }}</td>
+                        <td>{{ row["total"] | usd }}</td>
+                        <td><button class="btn btn-primary" type="submit" name="stock_symbol" value="{{ row['symbol'] }}">Sell</button> <input autocomplete="off" min="0" class="form-control form-control-sm" name="tosell" size="7" placeholder="Shares" type="number"></td>
+                        <td><button class="btn btn-primary" type="submit" name="stock_symbol" value="{{ row['symbol'] }}" formaction="/buy">Buy</button> <input autocomplete="off" min="0" class="form-control form-control-sm" name="tobuy" size="7" placeholder="Shares" type="number"></td>
+                    </tr>
+                </form>
+
+            {% endfor %}
+
+            <tr>
+                <td colspan="4">CASH</td>
+                <td>{{actual_cash}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}
